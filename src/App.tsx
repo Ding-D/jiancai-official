@@ -23,7 +23,7 @@ function App() {
           },
         }}
       >
-        <div className="overflow-hidden sm:pt-[46px] ssm:pt-[91px] sm:w-[1920px] sm:mx-auto">
+        <div className="overflow-hidden sm:pt-[46px] ssm:pt-[91px] sm:w-[1920px] sm:mx-auto ssm:w-full">
           <AiConsult />
           <Nav />
           <Header />

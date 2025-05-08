@@ -43,7 +43,13 @@ const Quality = () => {
     >
       <div className="flex flex-wrap pt-[50px]">
         {data.map((item, index) => {
-          return <StepCard key={index} {...item} arrow={item.arrow} />;
+          return (
+            <StepCard
+              key={index}
+              {...item}
+              arrow={index === data.length - 1 ? undefined : item.arrow}
+            />
+          );
         })}
       </div>
     </Wrap>
@@ -59,7 +65,7 @@ const StepCard = ({
 }: {
   img: string;
   desc: string;
-  arrow: 'green' | 'blue';
+  arrow?: 'green' | 'blue';
 }) => {
   return (
     <div className="flex mb-[60px] ssm:items-center">
@@ -67,11 +73,13 @@ const StepCard = ({
         <img src={img} alt="" />
         <p className="mt-[37px] text-[18px] text-[#333]">{desc}</p>
       </div>
-      <img
-        className="mx-[38px] mt-[52px] w-[38px] h-[25px]"
-        src={arrow === 'green' ? GreenArrow : BlueArrow}
-        alt=""
-      />
+      {arrow && (
+        <img
+          className="mx-[16px] mt-[52px] w-[38px] h-[25px]"
+          src={arrow === 'green' ? GreenArrow : BlueArrow}
+          alt=""
+        />
+      )}
     </div>
   );
 };

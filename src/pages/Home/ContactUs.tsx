@@ -44,8 +44,9 @@ const ContactUs = () => {
     if (res.status === 200 && res.data?.code === 200) {
       form.resetFields();
       messageApi.success('留言成功');
+    } else {
+      messageApi.error('留言失败');
     }
-    messageApi.error('留言失败');
   };
 
   const renderForm = () => {

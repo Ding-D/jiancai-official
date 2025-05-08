@@ -28,7 +28,7 @@ const WxQrCode = ({ codeStyle = {} }: { codeStyle?: React.CSSProperties }) => {
             key={index}
           >
             <img className="w-[97px] h-[97px]" src={item.icon} alt="" />
-            <span className="text-[14px]">{item.label}</span>
+            <span className="text-[14px] text-white">{item.label}</span>
           </div>
         );
       })}

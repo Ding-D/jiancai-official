@@ -12,7 +12,29 @@
   }
 }
 /* 滚动动画 */
-@keyframes scroll {
+@keyframes scrollX {
+  0% {
+    /* transform: translateX(0); */
+  }
+  100% {
+    transform: translateX(-50%); /* 根据内容高度调整 */
+  }
+}
+
+.scrollX-animation {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-name: scrollX;
+  animation-duration: 15s;
+}
+.scrollX-animation:hover {
+  animation-play-state: paused; /* 鼠标悬停时暂停动画 */
+  will-change: transform;
+}
+
+/* 滚动动画 */
+@keyframes scrollY {
   0% {
     transform: translateY(0);
   }
@@ -21,6 +43,15 @@
   }
 }
 
-.scroll-animation {
-  animation: scroll 10s linear infinite; /* 10秒滚动一次，可调整速度 */
+.scrollY-animation {
+  position: absolute;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-name: scrollY;
+  animation-duration: 15s;
+}
+.scrollY-animation:hover {
+  animation-play-state: paused; /* 鼠标悬停时暂停动画 */
+  will-change: transform;
 }

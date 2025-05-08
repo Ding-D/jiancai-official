@@ -20,6 +20,12 @@ importers:
       axios:
         specifier: ^1.8.4
         version: 1.8.4
+      jquery:
+        specifier: ^3.7.1
+        version: 3.7.1
+      jquery.marquee:
+        specifier: ^1.6.1
+        version: 1.6.1
       mockjs:
         specifier: ^1.1.0
         version: 1.1.0
@@ -1182,6 +1188,12 @@ packages:
   jiti@1.21.7:
     resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
+
+  jquery.marquee@1.6.1:
+    resolution: {integrity: sha512-k9X7pNKUA2DE7+07xxDF9b8qwakrYyS6HzLT2IniyLbFPhjsnxgeVnSfZrcfEvbSkLgsahHfPXnS3AS7Tn07sg==}
+
+  jquery@3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3126,6 +3138,10 @@ snapshots:
       '@pkgjs/parseargs': 0.11.0
 
   jiti@1.21.7: {}
+
+  jquery.marquee@1.6.1: {}
+
+  jquery@3.7.1: {}
 
   js-tokens@4.0.0: {}
 

@@ -34,7 +34,7 @@ const Partner = () => {
           maskImage: `repeating-linear-gradient(to left, rgba(254, 255, 255, 0) 0%, rgba(254, 255, 255, 0.98) 42%, rgba(254, 255, 255, 0) 100%)`,
         }}
       >
-        <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap">
+        <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[0px] scrollX-animation">
           {data[0].map((item, index) => {
             return (
               <img
@@ -46,7 +46,7 @@ const Partner = () => {
             );
           })}
         </div>
-        <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[88px]">
+        <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[88px] scrollX-animation">
           {data[1].map((item, index) => {
             return (
               <img

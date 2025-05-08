@@ -1,5 +1,5 @@
 import Xuanfuqiu2 from '@assets/xuanfuqiu2.png';
-import { Button, Form, Input, message, Modal, Select } from 'antd';
+import { Button, Flex, Form, Input, message, Modal, Select, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { useEffect, useState } from 'react';
 import Warn from '@assets/warn.png';
@@ -125,14 +125,9 @@ const AiConsult = () => {
               label="姓名"
               name="name"
               rules={[{ required: true, message: '请输入姓名' }]}
-              style={{
-                display: 'inline-block',
-                width: '46%',
-                marginRight: '20%',
-              }}
             >
               <Input
-                className="w-full h-[50px] px-[16px] rounded-[4px] border border-[#D8D8D8]"
+                className="w-full px-[16px] rounded-[4px] border border-[#D8D8D8]"
                 type="text"
                 placeholder="请输入姓名"
               />
@@ -148,11 +143,10 @@ const AiConsult = () => {
                   message: '请输入有效的手机号',
                 },
               ]}
-              className="sm:w-[46%] sm:h-[36px]"
-              style={{ display: 'inline-block' }}
+              className=""
             >
               <Input
-                className="w-full h-[50px] px-[16px] rounded-[4px] border border-[#D8D8D8]"
+                className="w-full px-[16px] rounded-[4px] border border-[#D8D8D8]"
                 type="string"
                 placeholder="请输入手机"
               />
@@ -160,17 +154,13 @@ const AiConsult = () => {
 
             <Form.Item label="公司名称" name="companyName">
               <Input
-                className="w-full h-[50px] px-[16px] rounded-[4px] border border-[#D8D8D8]"
+                className="w-full px-[16px] rounded-[4px] border border-[#D8D8D8]"
                 type="text"
                 placeholder="请输入公司名称"
               />
             </Form.Item>
 
-            <Form.Item
-              label="公司规模"
-              name="companyScaleId"
-              className="sm:w-[40%] sm:mr-[20%] sm:inline-block"
-            >
+            <Form.Item label="公司规模" name="companyScaleId" className="">
               <Select placeholder="请选择公司规模">
                 {companySize.map((item) => {
                   return (
@@ -182,12 +172,12 @@ const AiConsult = () => {
               </Select>
             </Form.Item>
 
-            <Form.Item
+            {/* <Form.Item
               name="companyScaleText"
               className="sm:w-[46%]  sm:inline-block"
             >
               <Input placeholder="请输入公司规模" />
-            </Form.Item>
+            </Form.Item> */}
 
             <Form.Item label="咨询需求" name="consultationNeedId">
               <Select placeholder="请选择咨询需求">

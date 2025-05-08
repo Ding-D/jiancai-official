@@ -1,4 +1,7 @@
 import RightArrow from '@assets/rightArrow.png';
+import { useEffect, useRef } from 'react';
+// import $ from 'jquery';
+// import 'jquery.marquee';
 
 const StaffCard = (props: {
   avatar: string;
@@ -7,6 +10,24 @@ const StaffCard = (props: {
   desc: string[];
 }) => {
   const { avatar, title, job, desc } = props;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const containerOffsetHeight = containerRef.current?.offsetHeight || 0;
+    const contentOffsetHeight = contentRef.current?.offsetHeight || 0;
+    const scrollHeight = contentOffsetHeight - containerOffsetHeight;
+
+    if (scrollHeight > 0 && contentRef.current) {
+      contentRef.current.className =
+        (contentRef.current.className || '') + ' scrollY-animation';
+
+      contentRef.current.innerHTML =
+        contentRef.current.innerHTML + contentRef.current.innerHTML; // 重新渲染内容
+
+      // 设置动画持续时间
+      contentRef.current.style.animationDuration = `${(contentRef.current.offsetHeight - containerOffsetHeight) / 24}s`;
+    }
+  }, [desc]);
   return (
     <div className="flex flex-1 relative sm:items-start ssm:flex-wrap ssm:mb-[8px] ssm:text-center ssm:flex-col ssm:justify-center ssm:items-center">
       <img
@@ -32,19 +53,24 @@ const StaffCard = (props: {
               </div>
             ) : null}
           </div>
-          <div className="flex-1 gap-[10px] flex flex-col overflow-scroll no-scrollbar scroll-content">
-            {(desc || []).map((item, index) => {
-              return (
-                <div className="flex gap-[9px]" key={index}>
-                  <img
-                    src={RightArrow}
-                    alt=""
-                    className="w-[8px] h-[8px] mt-[8px]"
-                  />
-                  <span className="text-left">{item}</span>
-                </div>
-              );
-            })}
+          <div ref={containerRef} className="flex-1 overflow-hidden relative">
+            <div
+              ref={contentRef}
+              className="gap-[10px] flex flex-col no-scrollbar"
+            >
+              {(desc || []).map((item, index) => {
+                return (
+                  <div className="flex gap-[9px]" key={index}>
+                    <img
+                      src={RightArrow}
+                      alt=""
+                      className="w-[8px] h-[8px] mt-[8px]"
+                    />
+                    <span className="text-left">{item}</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

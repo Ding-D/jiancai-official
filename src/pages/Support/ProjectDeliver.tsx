@@ -35,7 +35,7 @@ const ProjectDeliver = () => {
     <div className="bg-[#FBFCFE]">
       <div className="flex justify-center pt-[63px]">
         <Title
-          title="AI项目交付"
+          title="AI项目交付介绍"
           subtitle={'AI project delivery'.toUpperCase()}
         />
       </div>
