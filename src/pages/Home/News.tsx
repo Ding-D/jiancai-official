@@ -145,6 +145,7 @@ const NewCard = ({ articles }: { articles: NewsArticle[] }) => {
             desc={item.content || ''}
             // time="2025年02月24日18:31"
             time={item.createTime || ''}
+            redirectUrl={item.redirectUrl || ''}
           />
         ))}
       </div>

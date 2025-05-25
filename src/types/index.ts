@@ -195,6 +195,8 @@ export interface NewsArticle {
    * 浏览次数
    */
   viewCount?: number;
+
+  redirectUrl?: string;
 }
 
 /**
@@ -310,6 +312,7 @@ export interface TrainingCase {
   status?: number;
   title?: string;
   updateTime?: string;
+  redirectUrl?: string;
 }
 
 /**

@@ -6,12 +6,14 @@ const ImgDesc = ({
   descTip = '',
   desc,
   reverse = false,
+  redirectUrl = '',
 }: {
   img: string;
   title: string;
   descTip?: string;
   desc: string[];
   reverse?: boolean;
+  redirectUrl?: string;
 }) => {
   return (
     <div
@@ -19,6 +21,11 @@ const ImgDesc = ({
         'flex gap-[57px] ssm:flex-col ssm:flex-wrap' +
         (reverse ? 'sm:flex-row-reverse' : '')
       }
+      onClick={() => {
+        if (redirectUrl) {
+          window.open(redirectUrl, '_blank');
+        }
+      }}
     >
       <img
         style={{ background: 'rgba(138,210,255,0.1)' }}

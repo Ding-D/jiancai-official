@@ -3,14 +3,23 @@ const InfoCard = ({
   title = '',
   desc = '',
   time = '',
+  redirectUrl = '',
 }: {
   img: string;
   title: string;
   desc: string;
   time: string;
+  redirectUrl: string;
 }) => {
   return (
-    <div className="flex flex-col gap-[18px] flex-shrink-0 w-[450px] ssm:w-full">
+    <div
+      className="flex flex-col gap-[18px] flex-shrink-0 w-[450px] ssm:w-full"
+      onClick={() => {
+        if (redirectUrl) {
+          window.open(redirectUrl, '_blank');
+        }
+      }}
+    >
       <img className="h-[280px] rounded-[6px]" src={img} alt="" />
       <div className="font-medium text-xl text-[#333333] leading-[30px] text-left">
         {title}

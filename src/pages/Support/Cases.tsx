@@ -38,6 +38,7 @@ const Cases = () => {
               img={item.coverUrl as string}
               title={item.title as string}
               desc={JSON.parse(item.content || '[]')}
+              redirectUrl={item.redirectUrl || ''}
             />
           );
         })}
