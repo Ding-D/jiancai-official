@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Warn from '@assets/warn.png';
 import request from '@/api/request';
 import { CompanyScaleOption, ConsultationNeedOption } from '@/types';
+import WxQrCode from '../WxQrCode';
 
 const AiConsult = () => {
   const [visible, setVisible] = useState(false);
@@ -197,6 +198,8 @@ const AiConsult = () => {
                 placeholder="请输入留言内容"
               />
             </Form.Item>
+
+            <WxQrCode />
           </Form>
         </div>
       </Modal>
