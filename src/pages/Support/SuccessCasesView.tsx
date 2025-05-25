@@ -25,6 +25,7 @@ const SuccessCasesView = () => {
         background: 'white',
       }}
       subtitle="成功案例展示"
+      id="成功案例展示"
     >
       <div className="pt-[60px] pb-[87px] flex flex-col gap-[102px]">
         {cases.map((item, index) => {

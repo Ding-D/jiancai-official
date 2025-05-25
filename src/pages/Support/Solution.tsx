@@ -59,13 +59,15 @@ const Solution = () => {
     <div>
       <div className="flex justify-center pt-[63px] pb-[66px]">
         <Title
-          title="AI 咨询与解决方案介绍"
+          title="AI咨询与解决方案介绍"
+          id="AI咨询与解决方案介绍"
           subtitle={'Introduction to AI Consulting and Solutions'.toUpperCase()}
         />
       </div>
       <Wrap
         style={{ paddingLeft: '13.5%', paddingRight: '13.5%' }}
         subtitle="特点与优势"
+        id="特点与优势"
       >
         <div className="sm:grid sm:grid-cols-4 sm:gap-[80px] pt-[66px] pb-[70px]">
           {data.map((item) => {

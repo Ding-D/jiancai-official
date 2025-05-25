@@ -27,6 +27,7 @@ const Cases = () => {
       }}
       bg={Peixunyuchengguo}
       subtitle="培训成果与案例"
+      id="培训成果与案例"
     >
       <div className="pt-[60px] pb-[87px] flex flex-col gap-[102px]">
         {data.map((item, index) => {

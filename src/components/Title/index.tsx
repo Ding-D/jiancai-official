@@ -4,15 +4,17 @@ const Title = ({
   mainColor = '#333',
   color = '#1F2329',
   className = '',
+  id = '',
 }: {
   title: string;
   subtitle: string;
   mainColor?: string;
   color?: string;
   className?: string;
+  id?: string;
 }) => {
   return (
-    <div className={`flex justify-center ${className}`}>
+    <div className={`flex justify-center ${className}`} id={id}>
       <div className="relative w-[5px] h-[55px]">
         <span
           style={{

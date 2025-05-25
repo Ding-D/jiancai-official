@@ -1,9 +1,4 @@
-import SubTitle from '@/components/SubTitle';
 import Title from '@/components/Title';
-import { ReactNode } from 'react';
-import Dengpao from '@assets/dengpao.png';
-import Qianbi from '@assets/qianbi.png';
-import Yingyong from '@assets/yingyong.png';
 import Wrap from '@/components/Wrap';
 import Peixunneirong from '@assets/peixunneirongyoushi.png';
 import ColImgDesc from '@/components/ColImgDesc';
@@ -36,6 +31,7 @@ const ProjectDeliver = () => {
       <div className="flex justify-center pt-[63px]">
         <Title
           title="AI项目交付介绍"
+          id="AI项目交付介绍"
           subtitle={'AI project delivery'.toUpperCase()}
         />
       </div>
@@ -43,6 +39,7 @@ const ProjectDeliver = () => {
         <Wrap
           style={{ paddingLeft: '13.5%', paddingRight: '13.5%' }}
           subtitle="交付团队介绍"
+          id="交付团队介绍"
           bg={Peixunneirong}
         >
           <div className="flex gap-[61px] pt-[54px] pb-[84px] ssm:flex-wrap">

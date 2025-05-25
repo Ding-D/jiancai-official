@@ -24,7 +24,8 @@ const SuccessCases = () => {
         paddingRight: '13.5%',
         background: 'white',
       }}
-      subtitle="成功案例展示"
+      subtitle="成果案例展示"
+      id="成果案例展示"
     >
       <div className="pt-[60px] pb-[87px] flex flex-col gap-[102px]">
         {cases.map((item, index) => {

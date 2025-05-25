@@ -29,6 +29,7 @@ const AIKnowledge = () => {
       style={{ paddingLeft: '13.5%', paddingRight: '13.5%' }}
       subtitle="培训内容优势"
       bg={Peixunneirong}
+      id="培训内容优势"
     >
       <div className="flex gap-[61px] pt-[54px] pb-[84px] ssm:flex-wrap">
         {data.map((item, index) => {

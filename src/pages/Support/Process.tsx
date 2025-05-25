@@ -47,6 +47,7 @@ const Process = () => {
         background: '#FBFCFE',
       }}
       subtitle="咨询和解决方案工作流程"
+      id="咨询和解决方案工作流程"
     >
       <div className="flex flex-col gap-[46px] pt-[45px] pb-[80px]">
         {data.map((item, index) => {
