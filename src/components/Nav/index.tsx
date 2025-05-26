@@ -1,6 +1,6 @@
 import { Menu, MenuProps } from 'antd';
 import { useEffect, useMemo, useState } from 'react';
-import Logo2 from '@/assets/logo2.png';
+import Logo3 from '@/assets/logo3.png';
 import { useNavigate } from 'react-router-dom';
 import useRouteStore from '@/store/useRouteStore';
 
@@ -47,7 +47,7 @@ const Nav = () => {
   return (
     <div className="fixed w-screen ssm:flex-wrap  top-0 z-50 flex justify-between px-[13.5%] bg-white">
       <div>
-        <img src={Logo2} alt="logo" className="w-[337px] h-[46px]" />
+        <img src={Logo3} alt="logo" className="w-[337px] h-[46px]" />
       </div>
       <Menu
         style={{

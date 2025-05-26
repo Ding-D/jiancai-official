@@ -3,7 +3,7 @@ import Wrap from '@/components/Wrap';
 import Peixunneirong from '@assets/peixunneirongyoushi.png';
 import ColImgDesc from '@/components/ColImgDesc';
 
-import Aihead from '@assets/aihead.png';
+import Aihead from '@assets/aiheadImg.png';
 import AiDna from '@assets/aidnaimg.png';
 import AiBuild from '@assets/aibuildimg.png';
 

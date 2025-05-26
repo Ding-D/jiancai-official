@@ -22,7 +22,7 @@ const Header = () => {
           <div key={index}>
             <img
               src={item.imageUrl}
-              className="w-full object-cover sm:h-[588px] ssm:h-[191px]"
+              className="w-full 1k:object-cover 2xl:object-fill sm:h-[588px] ssm:h-[191px]"
             />
           </div>
         ))}

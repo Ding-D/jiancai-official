@@ -5,7 +5,8 @@ import { Suspense } from 'react';
 import RouteView from './RouteView';
 import { ConfigProvider, Spin } from 'antd';
 import AiConsult from './components/AiConsult';
-
+import 'react-lazy-load-image-component/src/effects/blur.css';
+ 
 function App() {
   return (
     <Suspense

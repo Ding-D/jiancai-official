@@ -42,7 +42,7 @@ const Quality = () => {
       id="交付流程与质量保障"
       style={{ paddingLeft: '13.5%', paddingRight: '13.5%' }}
     >
-      <div className="flex flex-wrap pt-[50px]">
+      <div className="flex flex-wrap justify-center pt-[50px]">
         {data.map((item, index) => {
           return (
             <StepCard

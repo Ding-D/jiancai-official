@@ -45,8 +45,28 @@ const Partner = () => {
               />
             );
           })}
+          {data[0].map((item, index) => {
+            return (
+              <img
+                key={index}
+                src={item}
+                alt=""
+                className="cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
+              />
+            );
+          })}
         </div>
         <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[88px] scrollX-animation">
+          {data[1].map((item, index) => {
+            return (
+              <img
+                key={index}
+                src={item}
+                alt=""
+                className="cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
+              />
+            );
+          })}
           {data[1].map((item, index) => {
             return (
               <img
