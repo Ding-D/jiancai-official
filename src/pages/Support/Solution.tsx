@@ -9,7 +9,7 @@ import Peixun5 from '@assets/peixun5.png';
 import Peixun6 from '@assets/peixun6.png';
 import Peixun7 from '@assets/peixun7.png';
 import Peixun8 from '@assets/peixun8.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // 生成SolutionCard的mock数据列表
 const data = [
   {
@@ -99,7 +99,7 @@ const SolutionCard = ({
 }) => {
   return (
     <div className="flex flex-col items-center gap-[22px]">
-      <img src={icon as string} alt="" />
+      <LazyLoadImage src={icon as string} alt="" />
       <span className="font-medium text-[24px] text-[#333333] leading-[35px] text-center normal-case">
         {title}
       </span>

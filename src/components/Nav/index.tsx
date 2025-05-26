@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Logo3 from '@/assets/logo3.png';
 import { useNavigate } from 'react-router-dom';
 import useRouteStore from '@/store/useRouteStore';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Nav = () => {
   const [current, setCurrent] = useState<string>('/official/index');
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ const Nav = () => {
   return (
     <div className="fixed w-screen ssm:flex-wrap  top-0 z-50 flex justify-between px-[13.5%] bg-white">
       <div>
-        <img src={Logo3} alt="logo" className="w-[337px] h-[46px]" />
+        <LazyLoadImage src={Logo3} alt="logo" className="w-[337px] h-[46px]" />
       </div>
       <Menu
         style={{

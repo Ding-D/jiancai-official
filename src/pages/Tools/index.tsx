@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { Typography } from 'antd';
 import request from '@/api/request';
 import { AiTool, AiToolCategory } from '@/types';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const { Link } = Typography;
 
 interface IToolItem {
@@ -47,7 +47,11 @@ const Tools = () => {
   const renderTitle = (icon: ReactNode, title: string) => {
     return (
       <div className="flex items-center gap-[6px] mt-[50px] mb-[30px]">
-        <img className="w-[20px] h-[20px]" src={icon as string} alt="" />
+        <LazyLoadImage
+          className="w-[20px] h-[20px]"
+          src={icon as string}
+          alt=""
+        />
         <span className="font-normal text-[20px] text-[#333333] leading-[29px] text-left normal-case">
           {title}
         </span>
@@ -102,7 +106,7 @@ const AICard = ({
         borderRadius: '6px 6px 6px 6px',
       }}
     >
-      <img className="w-[50px] h-[50px]" src={icon} alt="" />
+      <LazyLoadImage className="w-[50px] h-[50px]" src={icon} alt="" />
       <div className="w-[234px] flex flex-col gap-[6px] ssm:overflow-hidden">
         <span className="truncate text-[20px] font-bold text-[#333]">
           {title}

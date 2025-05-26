@@ -1,5 +1,5 @@
 import Yes from '@assets/yes.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const ImgDesc = ({
   img,
   title,
@@ -27,7 +27,7 @@ const ImgDesc = ({
         }
       }}
     >
-      <img
+      <LazyLoadImage
         style={{ background: 'rgba(138,210,255,0.1)' }}
         className="sm:w-[50%] ssm:w-full object-contain"
         src={img}
@@ -49,7 +49,7 @@ const ImgDesc = ({
           {desc.map((item, index) => {
             return (
               <div key={index} className="flex gap-[16px]">
-                <img className="w-[18px] h-[16px] mt-3" src={Yes} />
+                <LazyLoadImage className="w-[18px] h-[16px] mt-3" src={Yes} />
                 <span className="font-normal text-[20px] text-[#333333] leading-[36px] text-left normal-case">
                   {item}
                 </span>

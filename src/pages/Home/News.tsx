@@ -5,7 +5,7 @@ import Title from '@/components/Title';
 import { NewsArticle, NewsCategory } from '@/types';
 import request from '@/api/request';
 import ImgScrollLeft from '@assets/scrollLeft.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const News = () => {
   const [cate, setCate] = useState<NewsCategory[]>([]);
   const [selectKey, setSelectKey] = useState<string>('');
@@ -121,7 +121,11 @@ const NewCard = ({ articles }: { articles: NewsArticle[] }) => {
           className="absolute top-[50%] translate-y-[-50%] left-[-60px] z-[99] cursor-pointer"
           onClick={scrollLeft}
         >
-          <img className="w-[42px] h-[42px]" src={ImgScrollLeft} alt="" />
+          <LazyLoadImage
+            className="w-[42px] h-[42px]"
+            src={ImgScrollLeft}
+            alt=""
+          />
         </div>
       ) : null}
       {articles.length ? (
@@ -129,7 +133,11 @@ const NewCard = ({ articles }: { articles: NewsArticle[] }) => {
           className="absolute top-[50%] translate-y-[-50%] right-[-60px] z-[99] cursor-pointer scale-x-[-1]"
           onClick={scrollRight}
         >
-          <img className="w-[42px] h-[42px]" src={ImgScrollLeft} alt="" />
+          <LazyLoadImage
+            className="w-[42px] h-[42px]"
+            src={ImgScrollLeft}
+            alt=""
+          />
         </div>
       ) : null}
 

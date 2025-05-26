@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import WxQrCode from '../WxQrCode';
 import Police from '@assets/police.png';
 import useRouteStore from '@/store/useRouteStore';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Footer = () => {
   const sectionTitleCls =
     'font-normal text-[14px] text-[#8B8B8B] leading-[20px] text-left';
@@ -81,7 +81,7 @@ const Footer = () => {
         </span>
         <span className={footerTextCls}>蜀ICP备1900447号-1</span>
         <div className="flex items-center gap-[6px]">
-          <img className="w-[18px] h-[20px]" src={Police} alt="" />
+          <LazyLoadImage className="w-[18px] h-[20px]" src={Police} alt="" />
           <span className={footerTextCls}>公安网备11010802013228号</span>
         </div>
       </div>

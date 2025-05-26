@@ -10,7 +10,7 @@ import { Button, Form, Input, message } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import WxQrCode from '@/components/WxQrCode';
 import request from '@/api/request';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const contactData = [
   {
     icon: Avatar,
@@ -107,9 +107,9 @@ const ContactUs = () => {
   const renderSubTitle = (title: string) => {
     return (
       <div className="flex gap-[20px] items-center ssm:justify-center ssm:mt-[16px]">
-        <img src={ArrowLeft} alt="" />
+        <LazyLoadImage src={ArrowLeft} alt="" />
         <span className="text-[20px] text-white font-bold">{title}</span>
-        <img src={ArrowRight} alt="" />
+        <LazyLoadImage src={ArrowRight} alt="" />
       </div>
     );
   };
@@ -120,7 +120,7 @@ const ContactUs = () => {
         {contactData.map((item, index) => {
           return (
             <div className="flex gap-[4px] items-center" key={index}>
-              <img src={item.icon} alt="" />
+              <LazyLoadImage src={item.icon} alt="" />
               <span className="text-white">{item.label}</span>
               <span className="text-white">{item.value}</span>
             </div>

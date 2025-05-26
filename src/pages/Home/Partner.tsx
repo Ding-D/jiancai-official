@@ -10,7 +10,7 @@ import Huopan07 from '@assets/huopan07.png';
 import Huopan08 from '@assets/huopan08.png';
 import Huopan09 from '@assets/huopan09.png';
 import Huopan010 from '@assets/huopan010.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Partner = () => {
   const data = [
     [Huopan01, Huopan02, Huopan03, Huopan04, Huopan05],
@@ -37,7 +37,7 @@ const Partner = () => {
         <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[0px] scrollX-animation">
           {data[0].map((item, index) => {
             return (
-              <img
+              <LazyLoadImage
                 key={index}
                 src={item}
                 alt=""
@@ -47,7 +47,7 @@ const Partner = () => {
           })}
           {data[0].map((item, index) => {
             return (
-              <img
+              <LazyLoadImage
                 key={index}
                 src={item}
                 alt=""
@@ -59,7 +59,7 @@ const Partner = () => {
         <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[88px] scrollX-animation">
           {data[1].map((item, index) => {
             return (
-              <img
+              <LazyLoadImage
                 key={index}
                 src={item}
                 alt=""
@@ -69,7 +69,7 @@ const Partner = () => {
           })}
           {data[1].map((item, index) => {
             return (
-              <img
+              <LazyLoadImage
                 key={index}
                 src={item}
                 alt=""

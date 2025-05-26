@@ -6,7 +6,7 @@ import Qiyejiazhiguan from '@assets/qiyejiazhiguan.png';
 import Qiyejingshen from '@assets/qiyejingshen.png';
 import AboutBg from '@assets/AboutBg.png';
 import Wrap from '@/components/Wrap';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Vision = () => {
   const data = [
     {
@@ -77,7 +77,11 @@ const ItemCard = ({
       }}
       className="flex-1 ssm:flex-auto ssm:w-full flex flex-col items-center"
     >
-      <img className="w-[90px] h-[90px] mt-[38px]" src={icon} alt="" />
+      <LazyLoadImage
+        className="w-[90px] h-[90px] mt-[38px]"
+        src={icon}
+        alt=""
+      />
       <div className="text-[24px] font-bold mt-[20px] mb-[28px]">{title}</div>
       <div className="mx-[18px] mb-[34px] pt-[26px] border-t-[1px] border-[#D8D8D8] text-[18px] text-[#666]">
         {desc}

@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const InfoCard = ({
   img = '',
   title = '',
@@ -20,7 +21,7 @@ const InfoCard = ({
         }
       }}
     >
-      <img className="h-[280px] rounded-[6px]" src={img} alt="" />
+      <LazyLoadImage className="h-[280px] rounded-[6px]" src={img} alt="" />
       <div className="font-medium text-xl text-[#333333] leading-[30px] text-left">
         {title}
       </div>

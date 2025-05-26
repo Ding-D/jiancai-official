@@ -6,7 +6,7 @@ import Warn from '@assets/warn.png';
 import request from '@/api/request';
 import { CompanyScaleOption, ConsultationNeedOption } from '@/types';
 import WxQrCode from '../WxQrCode';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const AiConsult = () => {
   const [visible, setVisible] = useState(false);
   const [form] = Form.useForm();
@@ -61,7 +61,7 @@ const AiConsult = () => {
         className="fixed top-[40%] z-[9999] cursor-pointer sm:right-[45px] ssm:left-[12px]"
         onClick={() => setVisible(true)}
       >
-        <img className="w-[76px]" src={Xuanfuqiu2} alt="" />
+        <LazyLoadImage className="w-[76px]" src={Xuanfuqiu2} alt="" />
         {/* <div className="absolute text-[14px] top-[42px] left-[10px] text-[#fff]">
           商机留言
         </div> */}
@@ -88,7 +88,7 @@ const AiConsult = () => {
         footer={
           <div className="sm:flex gap-[18px] sm:px-[88px] pb-[34px] justify-between ssm:px-[12px]">
             <div className="sm:flex items-center">
-              <img src={Warn} alt="" />
+              <LazyLoadImage src={Warn} alt="" />
               <div className="ml-[10px] text-[14px] text-[#888]">
                 我们承诺严格保护您的隐私，所收集信息仅用于与您沟通业务需求。详细隐私政策请查看详情
               </div>

@@ -2,7 +2,7 @@ import request from '@/api/request';
 import { CarouselBanner } from '@/types';
 import { Carousel } from 'antd';
 import { memo, useEffect, useState } from 'react';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Header = () => {
   const [banners, setBanners] = useState<CarouselBanner[]>([]);
 
@@ -20,7 +20,7 @@ const Header = () => {
       <Carousel autoplay>
         {(banners || []).map((item, index) => (
           <div key={index}>
-            <img
+            <LazyLoadImage
               src={item.imageUrl}
               className="w-full 1k:object-cover 2xl:object-fill sm:h-[588px] ssm:h-[191px]"
             />

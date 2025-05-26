@@ -2,7 +2,7 @@ import RightArrow from '@assets/rightArrow.png';
 import { useEffect, useRef } from 'react';
 // import $ from 'jquery';
 // import 'jquery.marquee';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const StaffCard = (props: {
   avatar: string;
   title: string;
@@ -30,7 +30,7 @@ const StaffCard = (props: {
   }, [desc]);
   return (
     <div className="flex flex-1 relative sm:items-start ssm:flex-wrap ssm:mb-[8px] ssm:text-center ssm:flex-col ssm:justify-center ssm:items-center">
-      <img
+      <LazyLoadImage
         className="sm:w-[40%] border-none outline-none object-contain ssm:w-full"
         src={avatar}
         alt=""
@@ -61,7 +61,7 @@ const StaffCard = (props: {
               {(desc || []).map((item, index) => {
                 return (
                   <div className="flex gap-[9px]" key={index}>
-                    <img
+                    <LazyLoadImage
                       src={RightArrow}
                       alt=""
                       className="w-[8px] h-[8px] mt-[8px]"

@@ -1,7 +1,7 @@
 import QrCodeWx from '@assets/qrCodeWx.png';
 import QrCodeWxVideo from '@assets/qrCodeWxVideo.png';
 import QrCodeWxWx from '@assets/qrCodeWxWx.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const qrCodeData = [
   {
     icon: QrCodeWx,
@@ -27,7 +27,11 @@ const WxQrCode = ({ codeStyle = {} }: { codeStyle?: React.CSSProperties }) => {
             className="w-[124px] h-[124px] flex flex-col gap-[4px] items-center"
             key={index}
           >
-            <img className="w-[97px] h-[97px]" src={item.icon} alt="" />
+            <LazyLoadImage
+              className="w-[97px] h-[97px]"
+              src={item.icon}
+              alt=""
+            />
             <span className="text-[14px] text-white">{item.label}</span>
           </div>
         );

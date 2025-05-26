@@ -6,7 +6,7 @@ import Img0002 from '@assets/0002.png';
 import Img0003 from '@assets/0003.png';
 import Img0004 from '@assets/0004.png';
 import Img0005 from '@assets/0005.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const data = [
   {
     img: Img0001,
@@ -71,11 +71,11 @@ const StepCard = ({
   return (
     <div className="flex mb-[60px] ssm:items-center">
       <div className="sm:w-[390px]">
-        <img src={img} alt="" />
+        <LazyLoadImage src={img} alt="" />
         <p className="mt-[37px] text-[18px] text-[#333]">{desc}</p>
       </div>
       {arrow && (
-        <img
+        <LazyLoadImage
           className="mx-[16px] mt-[52px] w-[38px] h-[25px]"
           src={arrow === 'green' ? GreenArrow : BlueArrow}
           alt=""

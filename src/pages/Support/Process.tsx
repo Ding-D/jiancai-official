@@ -3,7 +3,7 @@ import Process01 from '@assets/process01.png';
 import Process02 from '@assets/process02.png';
 import Process03 from '@assets/process03.png';
 import Process04 from '@assets/process04.png';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // 生成ProcessCard的mock数据列表
 const data = [
   {
@@ -71,7 +71,7 @@ const ProcessCard = ({
 }) => {
   return (
     <div className="sm:flex items-center gap-[53px]">
-      <img src={icon} alt="" />
+      <LazyLoadImage src={icon} alt="" />
       <div className="flex-1 bg-white shadow-[0px_0px_16px_0px_rgba(0,0,0,0.04)] rounded-[6px] py-[16px] px-[24px]">
         <div className="text-[20px] font-bold text-[#333] mb-[14px]">
           {title}

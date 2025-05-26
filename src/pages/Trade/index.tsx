@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from 'react';
 import useRouteStore from '@/store/useRouteStore';
 import request from '@/api/request';
 import { SupplierPartner } from '@/types';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const Trade = () => {
   return (
     <div className="mt-[64px]">
@@ -115,7 +115,7 @@ export const TradeDetail = () => {
         <div className=" py-[8px] px-[18px] bg-[#FDFEFF] rounded-[6px] border border-[#CAE2FF] border-dashed">
           <div className="flex items-center justify-between ssm:flex-wrap">
             <div className="flex items-center ssm:mb-[8px]">
-              <img
+              <LazyLoadImage
                 className="w-[54px] h-[54px] flex-shrink-0"
                 src={data?.logoUrl || ''}
                 alt=""
@@ -154,7 +154,7 @@ export const TradeDetail = () => {
         <div className="grid grid-cols-2 gap-4">
           {data?.images?.map((item, key) => {
             return (
-              <img
+              <LazyLoadImage
                 key={key}
                 className="object-cover"
                 src={item.fileUrl || ''}
@@ -177,7 +177,7 @@ export const TradeDetail = () => {
           className="flex gap-[2px] items-center cursor-pointer"
           onClick={() => navigate('/official/trade')}
         >
-          <img className="w-[14px] h-[14px]" src={BackArrow} alt="" />
+          <LazyLoadImage className="w-[14px] h-[14px]" src={BackArrow} alt="" />
           <span className="text-[14px] text-[#87898C]">返回</span>
         </div>
         <div className="flex gap-[2px]">
@@ -210,7 +210,7 @@ const TradeCard = ({
   return (
     <div onClick={onClick} className="cursor-pointer flex flex-col gap-[12px]">
       <div className="w-full pb-[62%] relative">
-        <img
+        <LazyLoadImage
           className="w-full h-full absolute top-0 left-0 right-0  bottom-0"
           src={img}
           alt=""
