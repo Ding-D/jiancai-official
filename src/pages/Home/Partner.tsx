@@ -34,46 +34,46 @@ const Partner = () => {
           maskImage: `repeating-linear-gradient(to left, rgba(254, 255, 255, 0) 0%, rgba(254, 255, 255, 0.98) 42%, rgba(254, 255, 255, 0) 100%)`,
         }}
       >
-        <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[0px] scrollX-animation">
+        <div className="whitespace-nowrap sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[0px] scrollXPartner-animation ssm:animate-none">
           {data[0].map((item, index) => {
             return (
               <LazyLoadImage
                 key={index}
                 src={item}
                 alt=""
-                className="cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
+                className="inline-block w-[342px] h-[132px] cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
               />
             );
           })}
           {data[0].map((item, index) => {
             return (
               <LazyLoadImage
-                key={index}
+                key={'copy' + index}
                 src={item}
                 alt=""
-                className="cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
+                className="inline-block w-[342px] h-[132px]  cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:hidden"
               />
             );
           })}
         </div>
-        <div className="flex justify-center sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[88px] scrollX-animation">
+        <div className="whitespace-nowrap sm:gap-[30px] z-[1] ssm:flex-wrap sm:translate-x-[88px] scrollXPartner-animation  ssm:animate-none">
           {data[1].map((item, index) => {
             return (
               <LazyLoadImage
                 key={index}
                 src={item}
                 alt=""
-                className="cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
+                className="inline-block w-[342px] h-[132px] cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
               />
             );
           })}
           {data[1].map((item, index) => {
             return (
               <LazyLoadImage
-                key={index}
+                key={'copy' + index}
                 src={item}
                 alt=""
-                className="cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%]"
+                className="inline-block w-[342px] h-[132px] cursor-pointer hover:scale-[105%] transition-all duration-300 ssm:w-[50%] ssm:hidden"
               />
             );
           })}

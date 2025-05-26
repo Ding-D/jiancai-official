@@ -14,7 +14,7 @@
 /* 滚动动画 */
 @keyframes scrollX {
   0% {
-    /* transform: translateX(0); */
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%); /* 根据内容高度调整 */
@@ -29,6 +29,26 @@
   animation-duration: 15s;
 }
 .scrollX-animation:hover {
+  animation-play-state: paused; /* 鼠标悬停时暂停动画 */
+  will-change: transform;
+}
+/* 滚动动画 */
+@keyframes scrollXPartner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 684px - 30px)); /* 根据内容高度调整 */
+  }
+}
+.scrollXPartner-animation {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-name: scrollXPartner;
+  animation-duration: 15s;
+}
+.scrollXPartner-animation:hover {
   animation-play-state: paused; /* 鼠标悬停时暂停动画 */
   will-change: transform;
 }

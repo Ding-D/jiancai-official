@@ -79,11 +79,11 @@ const ProcessCard = ({
         <div className="flex flex-col gap-[8px]">
           {desc.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="text-[18px] text-[#666] flex items-center"
-              >
-                · {item}
+              <div key={index} className="text-[18px] text-[#666] flex">
+                <span className="flex items-start pt-[10px]">
+                  <span className="inline-block w-[6px] h-[6px] rounded-[6px] bg-black mr-[8px]"></span>
+                </span>
+                {item}
               </div>
             );
           })}
