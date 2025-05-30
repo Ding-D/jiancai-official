@@ -20,22 +20,24 @@ const Tools = () => {
     const toolsRes = await request.get('/ai/tool/list');
     const toolsData = toolsRes.data?.data as AiTool[];
     if (castData && toolsData) {
-      const newData = castData.map((item) => {
-        return {
-          icon: item.logoUrl || '',
-          title: item.name || '',
-          list: toolsData
-            .filter((tool) => tool.categoryId === item.id)
-            .map((tool) => {
-              return {
-                icon: tool.logoUrl || '',
-                title: tool.name || '',
-                url: tool.redirectUrl || '',
-                desc: tool.description || '',
-              };
-            }),
-        } as IToolItem;
-      });
+      const newData = castData
+        .map((item) => {
+          return {
+            icon: item.logoUrl || '',
+            title: item.name || '',
+            list: toolsData
+              .filter((tool) => tool.categoryId === item.id)
+              .map((tool) => {
+                return {
+                  icon: tool.logoUrl || '',
+                  title: tool.name || '',
+                  url: tool.redirectUrl || '',
+                  desc: tool.description || '',
+                };
+              }),
+          } as IToolItem;
+        })
+        .filter((item) => item.list.length);
       setData(newData);
     }
   };

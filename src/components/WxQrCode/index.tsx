@@ -1,11 +1,16 @@
 import QrCodeWx from '@assets/qrCodeWx.png';
 import QrCodeWxVideo from '@assets/qrCodeWxVideo.png';
 import QrCodeWxWx from '@assets/qrCodeWxWx.png';
+import JiancaiAI from '@assets/jiancai-ai.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 const qrCodeData = [
   {
     icon: QrCodeWx,
-    label: '微信公众号',
+    label: '微信公众号（官方）',
+  },
+  {
+    icon: JiancaiAI,
+    label: '微信公众号（AI）',
   },
   {
     icon: QrCodeWxVideo,
@@ -19,20 +24,22 @@ const qrCodeData = [
 
 const WxQrCode = ({ codeStyle = {} }: { codeStyle?: React.CSSProperties }) => {
   return (
-    <div className="flex flex-wrap gap-[50px] ssm:justify-center">
+    <div className="flex flex-wrap gap-[24px] ssm:justify-center">
       {qrCodeData.map((item, index) => {
         return (
           <div
             style={codeStyle}
-            className="w-[124px] h-[124px] flex flex-col gap-[4px] items-center"
+            className="flex-1 flex flex-col gap-[4px] items-center"
             key={index}
           >
             <LazyLoadImage
-              className="w-[97px] h-[97px]"
+              className="w-[96px] h-[96px]"
               src={item.icon}
               alt=""
             />
-            <span className="text-[14px] text-white">{item.label}</span>
+            <span className="text-[14px] text-white whitespace-nowrap">
+              {item.label}
+            </span>
           </div>
         );
       })}
